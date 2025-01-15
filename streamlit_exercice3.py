@@ -18,8 +18,7 @@ authenticator.login()
 if st.session_state.get("authentication_status"):
 
     with st.sidebar:
-        if st.sidebar.button("Déconnexion"):
-            authenticator.logout("Déconnexion")
+        authenticator.logout("Déconnexion")
         st.write(f"Bienvenue {users['usernames']['utilisateur']['name']}")
         selection = st.sidebar.radio("Menu", ["🏠Accueil", "🐱GIF"])
 
